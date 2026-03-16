@@ -28,7 +28,6 @@ test("amazon_json", async ({ page }) => {
             page.locator("h2.a-size-medium").first().click()
         ]);
 
-        // wait for product page
         await newPage.waitForSelector("#productTitle");
 
         const productTitle = await newPage.locator("#productTitle").textContent();
