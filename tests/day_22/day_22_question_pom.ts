@@ -1,16 +1,16 @@
 import { expect, Page, Locator } from "@playwright/test";
 
-class UploadPage {
+class bank {
 
-    page: Page;
-    fileInputField: Locator;
-    uploadButton: Locator;
-    uploadedFileLabel: Locator;
+    page
+    customerLogin
+    managerLogin
+    uploadedFileLabel
 
     constructor(page: Page) {
         this.page = page;
-        this.fileInputField = page.locator('#file-upload');
-        this.uploadButton = page.locator('#file-submit');
+        this.customerLogin = page.getByText("Customer Login")
+        this.managerLogin = page.getByText("Bank Manager Login")
         this.uploadedFileLabel = page.locator('#uploaded-files');
     }
 
